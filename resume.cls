@@ -19,9 +19,6 @@
 \usepackage[parfill]{parskip}       % Do not indent paragraphs
 \usepackage{array}                  % required for boldface tabular columns
 \usepackage{ifthen}
-\usepackage{xcolor}
-
-\definecolor{mygrey}{rgb}{0.4, 0.4, 0.4}
 
 \nofiles                            % .aux files are not needed for resumes
 \pagestyle{empty}                   % resumes do not need page numbers
@@ -101,7 +98,7 @@
   %%    Employer (bold)                     Dates (regular)    %%
   %%    Title (emphasis)                Location (emphasis)    %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  {\bf #1}                 \hfill                  {    \textcolor{mygrey}{#2}}% Stop a space
+  {\bf #1}                 \hfill                  {    #2}% Stop a space
   \ifthenelse{\equal{#3}{}}{}{
   \\
   {\em #3}                 \hfill                  {\em #4}% Stop a space
@@ -118,4 +115,4 @@
 \def\nameskip{\medskip}
 \def\addressskip{\smallskip}
 \def\sectionskip{\bigskip}
-\def\sectionlineskip{\medskip
+\def\sectionlineskip{\medskip}
